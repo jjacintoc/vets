@@ -7,12 +7,19 @@ namespace Vets.Models
 {
     public class Donos
     {
+        public Donos()
+        {
+            Animais = new HashSet<Animais>();
+        }
         public int ID { get; set; }
 
         public string Nome { get; set; }
 
         public int NIF { get; set; }
 
+
+        //lista de animais de um determinado dono
+        public ICollection<Animais> Animais { get; set; }
 
     }
 }
